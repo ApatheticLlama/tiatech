@@ -1,2 +1,4 @@
-package tiatech.common;public class CommonProxy {
+package tiatech.common;
+
+public class CommonProxy {
 }

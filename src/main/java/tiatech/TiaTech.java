@@ -1,2 +1,4 @@
-package tiatech;public class TiaTech {
+package tiatech;
+
+public class TiaTech {
 }

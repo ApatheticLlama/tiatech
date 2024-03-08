@@ -1,2 +1,4 @@
-package tiatech.common.metatileentities;public class TiaTechMetaTileEntities {
+package tiatech.common.metatileentities;
+
+public class TiaTechMetaTileEntities {
 }

@@ -1,2 +1,4 @@
-package tiatech.common.block;public class TiaTechMetaBlocks {
+package tiatech.common.block;
+
+public class TiaTechMetaBlocks {
 }
