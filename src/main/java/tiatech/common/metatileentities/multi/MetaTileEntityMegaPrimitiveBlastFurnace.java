@@ -321,4 +321,5 @@ import net.minecraftforge.fml.relauncher.SideOnly;
                         EnumParticleTypes.FLAME);
             }
         }
-}
+
+    }
