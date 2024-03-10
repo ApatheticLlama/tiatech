@@ -6,7 +6,7 @@ import net.minecraft.util.ResourceLocation;
 
 import gregtech.GTInternalTags;
 
-import tiatech.api.utils.TTLog;
+import tiatech.api.utils.TiaTechLog;
 import tiatech.common.metatileentities.TiaTechMetaTileEntities;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +26,7 @@ public class TiaTech {
     }
     @Mod.EventHandler
     public void onPreInit(@NotNull FMLPreInitializationEvent event) {
-        TTLog.init(event.getModLog());
+        TiaTechLog.init(event.getModLog());
         TiaTechMetaTileEntities.init();
     }
 }
