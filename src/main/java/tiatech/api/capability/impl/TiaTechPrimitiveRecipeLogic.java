@@ -1,7 +1,9 @@
 package tiatech.api.capability.impl;
 
 import gregtech.api.capability.impl.PrimitiveRecipeLogic;
+import gregtech.api.metatileentity.multiblock.ParallelLogicType;
 import gregtech.api.recipes.Recipe;
+import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import org.jetbrains.annotations.NotNull;
@@ -36,6 +38,7 @@ public class TiaTechPrimitiveRecipeLogic extends PrimitiveRecipeLogic {
         super.update();
     }
 
+    @Override
     protected boolean setupAndConsumeRecipeInputs(@NotNull Recipe recipe,
                                                   @NotNull IItemHandlerModifiable importInventory) {
         TiaTechRecipeMapPrimitiveMultiblockController controller = (TiaTechRecipeMapPrimitiveMultiblockController) metaTileEntity;

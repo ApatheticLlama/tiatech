@@ -8,6 +8,7 @@ import gregtech.api.gui.widgets.RecipeProgressWidget;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.ParallelLogicType;
 import gregtech.api.metatileentity.multiblock.RecipeMapPrimitiveMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -36,13 +37,14 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import tiatech.api.capability.impl.TiaTechPrimitiveRecipeLogic;
 import tiatech.api.metatileentity.TiaTechRecipeMapPrimitiveMultiblockController;
 
 import java.util.List;
 
 public class MetaTileEntityMegaPrimitiveBlastFurnace extends TiaTechRecipeMapPrimitiveMultiblockController {
 
-    private static final int PARALLEL_LIMIT = 256;
+    private static final int PARALLEL_LIMIT = 8;
 
     public MetaTileEntityMegaPrimitiveBlastFurnace(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, RecipeMaps.PRIMITIVE_BLAST_FURNACE_RECIPES);

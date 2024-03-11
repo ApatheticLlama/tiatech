@@ -10,6 +10,7 @@ import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
 import gregtech.api.metatileentity.multiblock.RecipeMapPrimitiveMultiblockController;
 import gregtech.api.pattern.BlockPattern;
+import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 
@@ -28,7 +29,6 @@ public abstract class TiaTechRecipeMapPrimitiveMultiblockController extends Reci
         super(metaTileEntityId, recipeMap);
         this.recipeMapWorkable = new TiaTechPrimitiveRecipeLogic(this, recipeMap);
         initializeAbilities();
-        resetTileAbilities();
     }
 
     public IItemHandlerModifiable getInputInventory() {
@@ -41,6 +41,18 @@ public abstract class TiaTechRecipeMapPrimitiveMultiblockController extends Reci
 
     public boolean checkRecipe(Recipe recipe, boolean consumeIfProcess) {
         return true;
+    }
+
+    @Override
+    protected void formStructure(PatternMatchContext context) {
+        super.formStructure(context);
+        initializeAbilities();
+    }
+
+    @Override
+    public void invalidateStructure() {
+        super.invalidateStructure();
+        resetTileAbilities();
     }
 
     @Override
