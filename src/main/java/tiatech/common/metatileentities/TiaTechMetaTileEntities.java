@@ -7,10 +7,11 @@ import tiatech.common.metatileentities.multi.*;
 
 public class TiaTechMetaTileEntities {
 
-    public static MetaTileEntityMegaPrimitiveBlastFurnace MEGA_PRIMITIVEBLASTFURNACE;
+    public static MetaTileEntityMegaPrimitiveBlastFurnace MEGA_PRIMITIVE_BLAST_FURNACE;
 
     public static void init() {
         //use ids 15000-15099
-        MEGA_PRIMITIVEBLASTFURNACE = registerMetaTileEntity(15000, new MetaTileEntityMegaPrimitiveBlastFurnace(TiaTech.ID("mega_primitiveblastfurnace")));
+        MEGA_PRIMITIVE_BLAST_FURNACE = registerMetaTileEntity(15000,
+                new MetaTileEntityMegaPrimitiveBlastFurnace(TiaTech.ID("mega_primitive_blast_furnace")));
     }
 }
