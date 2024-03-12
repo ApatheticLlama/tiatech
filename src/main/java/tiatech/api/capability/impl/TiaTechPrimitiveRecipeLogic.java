@@ -1,5 +1,6 @@
 package tiatech.api.capability.impl;
 
+import gregtech.api.GTValues;
 import gregtech.api.capability.impl.PrimitiveRecipeLogic;
 import gregtech.api.metatileentity.multiblock.ParallelLogicType;
 import gregtech.api.recipes.Recipe;
@@ -25,6 +26,11 @@ public class TiaTechPrimitiveRecipeLogic extends PrimitiveRecipeLogic {
     protected IItemHandlerModifiable getOutputInventory() {
         TiaTechRecipeMapPrimitiveMultiblockController controller = (TiaTechRecipeMapPrimitiveMultiblockController) metaTileEntity;
         return controller.getOutputInventory();
+    }
+
+    @Override
+    public long getMaxVoltage() {
+        return GTValues.V[GTValues.MAX];
     }
 
     @Override

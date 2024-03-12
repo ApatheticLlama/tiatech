@@ -44,7 +44,7 @@ import java.util.List;
 
 public class MetaTileEntityMegaPrimitiveBlastFurnace extends TiaTechRecipeMapPrimitiveMultiblockController {
 
-    private static final int PARALLEL_LIMIT = 8;
+    private static final int PARALLEL_LIMIT = 256;
 
     public MetaTileEntityMegaPrimitiveBlastFurnace(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, RecipeMaps.PRIMITIVE_BLAST_FURNACE_RECIPES);
